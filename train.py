@@ -34,7 +34,9 @@ validation_file=r'.\data\validation_set.h5'
 
 if __name__ == '__main__':
     if(~os.path.exists(train_file)):
-        print('The data file does not exist, please download and put it in the data directory.')
+        print('The data file does not exist, please download and put it in the data directory.\n')
+        print('If there is no data, please run independent_test.py !')
+
         sys.exit()
     
     train_set=np.empty(0)

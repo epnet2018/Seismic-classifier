@@ -25,20 +25,22 @@ import h5py
 from model import model_evaluation
 backend.set_image_data_format('channels_first')
 
-#Independent test set file path
-train_file='.\\data\\independent_test_set.h5'
-#train_file='.\\data\\train_set.h5'
+#Independent test set file path,The default is the example data, please download the official data to the data directory
+#train_file='.\\data\\independent_test_set.h5'
 #train_file='.\\data\\validation_set.h5'
-
+#train_file='.\\data\\train_set.h5'
+train_file='.\\data\\example_data.h5'
 backend.set_image_data_format('channels_first')
 
-wave_array=np.empty(0)
 
-#Read data into memory
-with h5py.File(train_file, 'r') as hf:
-    wave_array = hf['earthquake'][:]
 
 if __name__ == '__main__':
+    wave_array=np.empty(0)
+
+    #Read data into memory
+    with h5py.File(train_file, 'r') as hf:
+        wave_array = hf['earthquake'][:]
+    
     # Set random seeds to ensure consistency of each learning
     seed = 7
     np.random.seed(seed)
