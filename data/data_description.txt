@@ -1,3 +1,0 @@
-Because the complete data is large, Git-Hub cannot upload too large data, so if you use the complete training data, please download it at http://47.242.158.118/earthquake2/, which totals about 7GB of data.
-
-Git-hub can only provide case data.
